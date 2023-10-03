@@ -34,3 +34,7 @@ svg_icons:
   type: "list"
   list_type: "compact"
   description: "List of FontAwesome 5 icons used in this theme component"
+stickers_shadow:
+  type: bool
+  default: true
+  description: "Add shadow to stickers."
