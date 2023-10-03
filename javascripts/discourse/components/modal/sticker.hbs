@@ -1,0 +1,29 @@
+<DModal
+  @title={{theme-i18n "sticker.modal_title"}}
+  @closeModal={{@closeModal}}
+  id="sticker-modal"
+  class="sticker-modal"
+>
+  <:body>
+    <div class="sticker-pack">
+      {{#each stickerImages as |si|}}
+        <span 
+          class="sticker-holder"
+          {{on "click" this.pick}}
+        >
+          <img
+            class="sticker"
+            title={{si.title}}
+            alt={{si.title}}
+            src={{si.previewUrl}}
+            markdownUrl={{si.markdownUrl}}
+            width="120"
+            height="120"
+            loading="lazy"
+          />
+          <span class="emoji-alt">{{si.emoji}}</span>
+        </span>
+      {{/each}}
+    </div>
+  </:body>
+</DModal>

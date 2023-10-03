@@ -1,0 +1,36 @@
+sticker_images:
+  default: >-
+    []
+  json_schema: >-
+    {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "emoji": {
+            "type": "string"
+          },
+          "previewUrl": {
+            "type": "string"
+          },
+          "markdownUrl": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+    
+composer_icon:
+  type: string
+  default: "far-sticky-note"
+  description: "Add icon to Sticker composer button."
+svg_icons: 
+  default: "far-sticky-note"
+  type: "list"
+  list_type: "compact"
+  description: "List of FontAwesome 5 icons used in this theme component"
