@@ -29,6 +29,9 @@
       filter: drop-shadow(2px 2px 2px rgba(var(--always-black-rgb), 0.8));
       &.picked {
         animation: picked 0.45s;
+        @media (prefers-reduced-motion) {
+          animation-duration: 0s;
+        }
       }
     }
     span.emoji-alt {
