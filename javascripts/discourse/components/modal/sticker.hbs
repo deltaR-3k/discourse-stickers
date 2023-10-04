@@ -11,23 +11,38 @@
           class="sticker-holder"
           {{on "click" this.pick}}
         >
-          <DTooltip>
-            <:trigger>
-              <img
-                class="sticker"
-                alt={{si.title}}
-                src={{si.previewUrl}}
-                markdownUrl={{si.markdownUrl}}
-                width="100"
-                height="100"
-                loading="lazy"
-              />
-              <span class="emoji-alt">{{si.emoji}}</span>
-            </:trigger>
-            <:content>
-              {{si.title}}
-            </:content>
-          </DTooltip>
+          {{#if this.site.desktopView}}
+            <DTooltip>
+              <:trigger>
+                <img
+                  class="sticker"
+                  alt={{si.title}}
+                  src={{si.previewUrl}}
+                  markdownUrl={{si.markdownUrl}}
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                />
+                <span class="emoji-alt">{{si.emoji}}</span>
+              </:trigger>
+              <:content>
+                {{si.title}}
+              </:content>
+            </DTooltip>
+          {{/if}}
+          {{#if this.site.mobileView}}
+            <img
+              class="sticker"
+              title={{si.title}}
+              alt={{si.title}}
+              src={{si.previewUrl}}
+              markdownUrl={{si.markdownUrl}}
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            <span class="emoji-alt">{{si.emoji}}</span>
+          {{/if}}
         </span>
       {{/each}}
     </div>
