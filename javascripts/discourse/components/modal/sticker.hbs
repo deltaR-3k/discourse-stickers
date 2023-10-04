@@ -11,7 +11,12 @@
           class="sticker-holder"
           {{on "click" this.pick}}
         >
-          {{#if this.site.desktopView}}
+          {{#if 
+            (and 
+              this.site.desktopView
+              (not this.capabilities.touch)
+            )
+          }}
             <DTooltip>
               <:trigger>
                 <img
@@ -29,8 +34,7 @@
                 {{si.title}}
               </:content>
             </DTooltip>
-          {{/if}}
-          {{#if this.site.mobileView}}
+          {{else}}
             <img
               class="sticker"
               title={{si.title}}

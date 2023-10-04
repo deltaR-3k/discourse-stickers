@@ -7,6 +7,7 @@ import { getOwner } from "@ember/application";
 export default class Stickers extends Component {
   @tracked stickerImages = JSON.parse(settings.sticker_images);
   @service site;
+  @service capabilities;
   
   @action
   pick() {
