@@ -15,7 +15,7 @@ export default class Stickers extends Component {
     stickerImage.forEach((sticker) => {
       sticker.classList.add("picked");
       sticker.addEventListener("animationend", () => {
-        let markupComposer = `\n[wrap=sticker]![${sticker.alt}|75x65](${sticker.getAttribute("markdownUrl")})[/wrap]\n`;
+        let markupComposer = `[wrap=sticker]![${sticker.alt}|75x65](${sticker.getAttribute("markdownUrl")})[/wrap]`;
         let markupChatComposer = `\n![${sticker.alt}|75x65](${sticker.getAttribute("markdownUrl")})\n`;
         if (this.args.model?.customPickHandler) {
           this.args.model.customPickHandler(markupChatComposer);
