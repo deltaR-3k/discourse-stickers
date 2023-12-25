@@ -49,9 +49,9 @@
 .d-wrap[data-wrap="sticker"] {
   @include user-select(none);
   img {
-    width: 75px !important;
-    height: 65px !important;
-    aspect-ratio: 75 / 65 !important;
+    width: 60px !important;
+    height: 52px !important;
+    aspect-ratio: 60 / 52 !important;
     @if $stickers_shadow == "true" {
       filter: drop-shadow(2px 2px 2px rgba(var(--always-black-rgb), 0.8));
     }
